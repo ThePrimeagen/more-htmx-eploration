@@ -1,0 +1,12 @@
+<div id="list" class="flex flex-col">
+    {% include "total-time.html" %}
+    <div>
+        {{ range (reverse .Timings) }}
+            {{ template "timing" . }}
+        {{ else }}
+            <div>You have no timings because you are fat and lazy</div>
+        {{ end }}
+    </div>
+</div>
+
+
