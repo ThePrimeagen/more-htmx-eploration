@@ -7,7 +7,6 @@ pub struct Timing {
 	pub id: i32,
 }
 
-
 #[derive(Template)]
 #[template(path = "timer.html")]
 pub struct Timer {

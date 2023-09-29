@@ -1,6 +1,6 @@
 mod templates;
 use axum::{routing::get, Router};
-use templates::Index;
+use templates::{Index, Timing};
 //use tokio::sync::Mutex;
 
 /*
@@ -11,7 +11,17 @@ lazy_static::lazy_static! {
 
 async fn index() -> Index {
     return Index {
-        timings: vec![]
+        timings: vec![Timing {
+            timing_type: "movement",
+            start: 0,
+            stop: 25,
+            id: 1,
+        }, Timing {
+            timing_type: "movement",
+            start: 75,
+            stop: 120,
+            id: 2,
+        }]
     };
 }
 
