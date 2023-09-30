@@ -1,10 +1,17 @@
 use askama::Template;
 
+#[derive(Clone, PartialEq)]
+pub enum TimingType {
+    Movement,
+    Consume,
+}
+
+#[derive(Clone)]
 pub struct Timing {
-    pub timing_type: &'static str,
+    pub timing_type: TimingType,
 	pub start: u64,
 	pub stop: u64,
-	pub id: i32,
+	pub id: usize,
 }
 
 #[derive(Template)]
