@@ -1,12 +1,12 @@
 use askama::Template;
 
-#[derive(Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum TimingType {
     Movement,
     Consume,
 }
 
-#[derive(Clone)]
+#[derive(Debug, Clone)]
 pub struct Timing {
     pub timing_type: TimingType,
 	pub start: u64,
@@ -20,7 +20,6 @@ pub struct Timer {
     pub oob: bool,
     pub msg: String
 }
-
 
 #[derive(Template)]
 #[template(path = "index.html")]

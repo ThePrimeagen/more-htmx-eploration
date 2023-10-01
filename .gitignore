@@ -1,2 +1,4 @@
 /target
 tracker-rs/target
+tracker-rs/dist/
+tracker-rs/node_modules
